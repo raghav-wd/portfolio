@@ -23,7 +23,7 @@
     "rules": {
         "react/react-in-jsx-scope": "off",
         "comma-dangle": 0,
-        "no-unused-vars": 0,
-        "prettier/prettier": ["error", {"trailingComma": "off"}]
+        "no-unused-vars": 0
+        // "prettier/prettier": ["error", {"trailingComma": "all"}]
     }
 }
