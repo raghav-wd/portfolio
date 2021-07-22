@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   overflow: hidden;
+  background-color: #080808;
 }
 
 .App {

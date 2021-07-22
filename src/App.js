@@ -4,6 +4,9 @@ import React, { Suspense, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, useGLTF } from "@react-three/drei";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import Home from "./components/pages/home";
+import Navbar from "./components/common/Navbar/";
 
 function App(nest) {
   const Model = () => {
@@ -13,21 +16,12 @@ function App(nest) {
 
   return (
     <div className="App">
-      <Canvas camera={{ position: [0, 0, 200], fov: 65 }}>
-        <Suspense fallback={null}>
-          <mesh rotation={[0, -Math.PI / 4, 0]} position={[0, -50, 0]}>
-            <Model />
-          </mesh>
-        </Suspense>
-      </Canvas>
+      <Navbar />
+      <Router>
+        <Route path="/" exact component={Home} />
+      </Router>
     </div>
   );
-}
-
-function Rotate(props) {
-  const ref = useRef();
-  useFrame((state) => (ref.current.rotation.y = state.clock.elapsedTime));
-  return <group ref={ref} {...props} />;
 }
 
 export default App;
