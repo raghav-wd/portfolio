@@ -5,8 +5,9 @@ import ReactDOM from "react-dom";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, useGLTF } from "@react-three/drei";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import Home from "./components/pages/home";
+import Home from "./components/pages/Home/";
 import Navbar from "./components/common/Navbar/";
+import Projects from "./components/pages/Projects/";
 
 function App(nest) {
   const Model = () => {
@@ -17,9 +18,8 @@ function App(nest) {
   return (
     <div className="App">
       <Navbar />
-      <Router>
-        <Route path="/" exact component={Home} />
-      </Router>
+      <Home />
+      <Projects />
     </div>
   );
 }

@@ -1,11 +1,32 @@
 html,
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  overflow: hidden;
+  color: white;
   background-color: #080808;
 }
 
 .App {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  transition: all 0.5 ease-in;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.Home {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Projects {
   width: 100vw;
   height: 100vh;
 }

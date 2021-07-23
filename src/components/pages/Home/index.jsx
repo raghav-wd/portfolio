@@ -1,6 +1,6 @@
 import React, { Suspense, useRef, useState } from "react";
 import ReactDOM from "react-dom";
-import "../../App.css";
+import "../../../App.css";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, useGLTF } from "@react-three/drei";
 
@@ -11,7 +11,7 @@ function Home(nest) {
   };
 
   return (
-    <div className="App">
+    <section className="Home">
       <Canvas camera={{ position: [0, 0, 200], fov: 65 }}>
         <Suspense fallback={null}>
           <mesh rotation={[0, -Math.PI / 4, 0]} position={[0, -50, 0]}>
@@ -19,7 +19,7 @@ function Home(nest) {
           </mesh>
         </Suspense>
       </Canvas>
-    </div>
+    </section>
   );
 }
 
