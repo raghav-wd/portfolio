@@ -11,7 +11,7 @@ function Home(nest) {
   };
 
   return (
-    <section data-scroll-section className="Home">
+    <div data-scroll-section className="Home page">
       <Canvas camera={{ position: [0, 0, 200], fov: 65 }}>
         <Suspense fallback={null}>
           <mesh rotation={[0, -Math.PI / 4, 0]} position={[0, -50, 0]}>
@@ -19,7 +19,7 @@ function Home(nest) {
           </mesh>
         </Suspense>
       </Canvas>
-    </section>
+    </div>
   );
 }
 
