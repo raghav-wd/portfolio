@@ -9,7 +9,7 @@ function Projects(nest) {
   //   };
 
   return (
-    <section className="Projects">
+    <section data-scroll-section className="Projects">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia minima
       sit eveniet aspernatur est dolores rerum. Repellat ratione nemo et at
       voluptates neque, error quibusdam mollitia tenetur ad autem dolorem!
