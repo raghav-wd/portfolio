@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "../../../App.css";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, useGLTF } from "@react-three/drei";
+import FeaturedText from "./FeaturedText";
 
 function Home(nest) {
   const Model = () => {
@@ -13,6 +14,9 @@ function Home(nest) {
   return (
     <div data-scroll-section className="Home page">
       <Canvas camera={{ position: [0, 0, 200], fov: 65 }}>
+        <Html fullscreen>
+          <FeaturedText />
+        </Html>
         <Suspense fallback={null}>
           <mesh rotation={[0, -Math.PI / 4, 0]} position={[0, -50, 0]}>
             <Model />
