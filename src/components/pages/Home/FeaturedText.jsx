@@ -16,18 +16,43 @@ const FeaturedText = () => {
   //Component to be animated
   return (
     <S.FeaturedText ref={(el) => (featuredText = el)} className="tl">
-      Hi! I'm Raghav
+      <div>Hi! I'm Raghav</div>
+      <div>Nice to meet ya</div>
+      <div>Our Skills Connect</div>
     </S.FeaturedText>
   );
 };
 
 //Animation
 const animation = (tl, el) => {
-  tl.from(el, {
+  tl.from(el.childNodes[0], {
     opacity: 0,
     duration: 1,
     x: 100,
     ease: "elastic",
+    delay: 2,
+  });
+  tl.from(el.childNodes[1], {
+    opacity: 0,
+    duration: 1,
+    y: -10,
+    ease: "elastic",
+  });
+  tl.to(el.childNodes[1], {
+    opacity: 0,
+    duration: 0.2,
+    y: -10,
+    delay: 1,
+  });
+  tl.to(el.childNodes[0], {
+    opacity: 0,
+    duration: 0.2,
+    x: -100,
+  });
+  tl.from(el.childNodes[2], {
+    opacity: 0,
+    duration: 0.3,
+    x: -100,
     delay: 2,
   });
 };
