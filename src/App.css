@@ -33,3 +33,12 @@ body {
   height: 100vh;
   /* background-color: #080808; */
 }
+
+.head{
+  opacity: 0;
+}
+
+.ani{
+  opacity: 1;
+  transition: opacity 4s ease;
+}

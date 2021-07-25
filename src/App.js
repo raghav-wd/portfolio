@@ -9,11 +9,8 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Home from "./components/pages/Home/";
 import Navbar from "./components/common/Navbar/";
 import Projects from "./components/pages/Projects/";
-import {
-  LocomotiveScrollProvider,
-  useLocomotiveScroll,
-} from "react-locomotive-scroll";
 import Scrollspy from "./components/common/Navbar/Scrollspy/";
+import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
   const Model = () => {
@@ -21,36 +18,32 @@ function App() {
     return <primitive object={gltf.scene} dispose={null} />;
   };
 
-  const containerRef = useRef(null);
-  const { scroll } = useLocomotiveScroll();
-
   useEffect(() => {
-    console.log("Scroll: " + scroll);
-  }, [scroll]);
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
+  }, []);
 
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        multiplier: 1.5,
-        // ... all available Locomotive Scroll instance options
-      }}
-      watch={
-        [
-          //...all the dependencies you want to watch to update the scroll
-        ]
-      }
-      containerRef={containerRef}
-    >
-      <main data-scroll-container ref={containerRef}>
-        <div className="App">
-          <Scrollspy />
-          <Home />
-          <Projects />
-          <Projects />
+    <main>
+      <div data-scroll-container className="App">
+        {/* <Scrollspy /> */}
+        <Home />
+        {/* <Projects />
+        <Projects /> */}
+        <div data-scroll-section className="Projects page" id="projects">
+          <h2
+            data-scroll-class="ani"
+            className="head"
+            data-scroll
+            data-scroll-speed="2"
+          >
+            Experience
+          </h2>
         </div>
-      </main>
-    </LocomotiveScrollProvider>
+      </div>
+    </main>
   );
 }
 

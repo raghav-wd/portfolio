@@ -18,7 +18,7 @@ const FeaturedText = () => {
     <S.FeaturedText ref={(el) => (featuredText = el)} className="tl">
       <div>Hi! I'm Raghav</div>
       <div>Nice to meet ya</div>
-      <div>Our Skills Connect</div>
+      <S.LastText>Our Skills Connect</S.LastText>
     </S.FeaturedText>
   );
 };
