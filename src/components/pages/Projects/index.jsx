@@ -13,7 +13,7 @@ function Projects(nest) {
     <div data-scroll-section className="Projects page" id="projects">
       <S.Header
         data-scroll-class="ani"
-        className="head-ani"
+        className="head"
         data-scroll
         data-scroll-speed="2"
       >

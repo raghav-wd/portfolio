@@ -6,9 +6,12 @@ html,
 body {
   margin: 0;
   color: white;
+}
+.App{
+  transition: background-color 0.5s ease-out;
   background-color: #080808;
 }
-
+/* 
 @media only screen and (max-width: 600px){
   .App {
     overflow-x: hidden;
@@ -21,7 +24,7 @@ body {
   div.page {
     scroll-snap-align: start;
   }
-}
+} */
 
 
 .Projects {
@@ -31,14 +34,16 @@ body {
 .Home {
   width: 100vw;
   height: 100vh;
+  border-bottom: 2px solid white;
   /* background-color: #080808; */
 }
 
 .head{
   opacity: 0;
+  text-decoration: underline;
+  transition: opacity 1s ease;
 }
 
 .ani{
   opacity: 1;
-  transition: opacity 4s ease;
 }
