@@ -30,18 +30,19 @@ body {
 .Projects {
   width: 100vw;
   height: 100vh;
+  padding: 12px;
 }
+
 .Home {
   width: 100vw;
   height: 100vh;
-  border-bottom: 2px solid white;
   /* background-color: #080808; */
 }
 
 .head{
   opacity: 0;
   text-decoration: underline;
-  transition: opacity 1s ease;
+  transition: opacity 1.5s ease;
 }
 
 .ani{

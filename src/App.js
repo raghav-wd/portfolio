@@ -37,14 +37,13 @@ function App() {
       }}
       watch={[scroll]}
     >
-      <div data-scroll-container className="App">
-        <main>
+      <main data-scroll-container>
+        <div data-scroll-class="bluebg" className="App">
           {/* <Scrollspy /> */}
           <Home />
           <Projects />
-          <Projects />
-        </main>
-      </div>
+        </div>
+      </main>
     </LocomotiveScrollProvider>
   );
 }

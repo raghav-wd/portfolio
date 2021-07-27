@@ -11,14 +11,11 @@ function Projects(nest) {
 
   return (
     <div data-scroll-section className="Projects page" id="projects">
-      <S.Header
-        data-scroll-class="ani"
-        className="head"
-        data-scroll
-        data-scroll-speed="2"
-      >
-        Experience
-      </S.Header>
+      <div className="container">
+        <S.Header data-scroll-class="ani" className="head" data-scroll>
+          Experience
+        </S.Header>
+      </div>
     </div>
   );
 }

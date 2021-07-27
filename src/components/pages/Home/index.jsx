@@ -9,18 +9,18 @@ import gsap from "gsap";
 
 function Home() {
   const Model = () => {
-    const gltf = useGLTF("./assets/models/the_magic_room/scene.gltf");
+    const gltf = useGLTF("./assets/models/gr/scene.gltf");
     return <primitive object={gltf.scene} dispose={null} />;
   };
 
   return (
     <div data-scroll-section className="Home page">
-      <Canvas camera={{ position: [0, 0, 200], fov: 65 }}>
+      <Canvas camera={{ position: [0, 0, 5], fov: 65 }}>
         <Html fullscreen>
           <FeaturedText />
         </Html>
         <Suspense fallback={null}>
-          <animated.mesh rotation={[0, -Math.PI / 4, 0]} position={[0, -50, 0]}>
+          <animated.mesh rotation={[0, -Math.PI / 4, 0]} position={[0, 0, 0]}>
             <Model />
           </animated.mesh>
         </Suspense>
