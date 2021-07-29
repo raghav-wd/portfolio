@@ -4,6 +4,15 @@ import "../../../App.css";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, useGLTF, useProgress } from "@react-three/drei";
 import { useSpring, Spring, animated } from "@react-spring/three";
+import {
+  EffectComposer,
+  DepthOfField,
+  Bloom,
+  Noise,
+  Vignette,
+  DotScreen,
+} from "@react-three/postprocessing";
+
 import FeaturedText from "./FeaturedText";
 import gsap from "gsap";
 
@@ -16,11 +25,12 @@ function Home() {
   return (
     <div data-scroll-section className="Home page">
       <Canvas camera={{ position: [0, 0, 5], fov: 65 }}>
-        <Html fullscreen>
-          <FeaturedText />
-        </Html>
+        <Html fullscreen></Html>
         <Suspense fallback={null}>
-          <animated.mesh rotation={[0, -Math.PI / 4, 0]} position={[0, 0, 0]}>
+          <animated.mesh
+            rotation={[0, -Math.PI / 1.4, 0]}
+            position={[2.8, -0.5, 0]}
+          >
             <Model />
           </animated.mesh>
         </Suspense>

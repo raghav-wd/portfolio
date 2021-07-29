@@ -9,7 +9,7 @@ body {
 }
 .App{
   transition: background-color 0.5s ease-out;
-  background-color: #080808;
+  background-color: #FFF;
 }
 /* 
 @media only screen and (max-width: 600px){
