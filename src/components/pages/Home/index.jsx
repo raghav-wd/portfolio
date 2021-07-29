@@ -4,15 +4,6 @@ import "../../../App.css";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, useGLTF, useProgress } from "@react-three/drei";
 import { useSpring, Spring, animated } from "@react-spring/three";
-import {
-  EffectComposer,
-  DepthOfField,
-  Bloom,
-  Noise,
-  Vignette,
-  DotScreen,
-} from "@react-three/postprocessing";
-
 import FeaturedText from "./FeaturedText";
 import gsap from "gsap";
 
