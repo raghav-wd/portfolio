@@ -20,6 +20,7 @@ export const Content = styled.div`
   position: absolute;
   top: 30%;
   left: 10%;
+  width: 40vw;
 `;
 
 const expand = keyframes`
@@ -53,4 +54,16 @@ export const Name = styled.p`
     transform-origin: center;
     animation: ${expand} 0.6s forwards;
   }
+`;
+
+const fadeIn = keyframes`
+to{
+  opacity: 1;
+}`;
+
+export const About = styled.p`
+  margin-top: 12px;
+  color: #505050;
+  opacity: 0;
+  animation: ${fadeIn} 1.5s forwards;
 `;

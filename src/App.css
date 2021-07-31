@@ -8,6 +8,10 @@ body {
   color: #505050;
   background-color: #fffde7;
 }
+
+p{
+  margin: 0;
+}
 /* .App{
   transition: background-color 0.5s ease-out;
 } */

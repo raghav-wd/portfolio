@@ -17,13 +17,7 @@ function Home() {
   return (
     <div data-scroll-section className="Home page">
       <Canvas id="canvas" camera={{ position: [0, 0, 5], fov: 65 }}>
-        <Html fullscreen>
-          <S.Content>
-            <S.Name data-scroll-speed={4} data-scroll>
-              John Doe
-            </S.Name>
-          </S.Content>
-        </Html>
+        <Html fullscreen></Html>
         <Suspense fallback={null}>
           <animated.mesh
             rotation={[0, -Math.PI / 1.4, 0]}
@@ -33,6 +27,14 @@ function Home() {
           </animated.mesh>
         </Suspense>
       </Canvas>
+      <S.Content data-scroll-speed={2} data-scroll>
+        <S.Name>John Doe</S.Name>
+        <S.About>
+          Im a software engineer specializing in building (and occasionally
+          designing) exceptional digital experiences. Currently, Im focused on
+          building accessible, human-centered products at Upstatement.
+        </S.About>
+      </S.Content>
     </div>
   );
 }
