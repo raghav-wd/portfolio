@@ -6,6 +6,7 @@ import { Html, useGLTF, useProgress } from "@react-three/drei";
 import { useSpring, Spring, animated } from "@react-spring/three";
 import FeaturedText from "./FeaturedText";
 import gsap from "gsap";
+import * as S from "./styles";
 
 function Home() {
   const Model = () => {
@@ -15,8 +16,14 @@ function Home() {
 
   return (
     <div data-scroll-section className="Home page">
-      <Canvas camera={{ position: [0, 0, 5], fov: 65 }}>
-        <Html fullscreen></Html>
+      <Canvas id="canvas" camera={{ position: [0, 0, 5], fov: 65 }}>
+        <Html fullscreen>
+          <S.Content>
+            <S.Name data-scroll-speed={4} data-scroll>
+              John Doe
+            </S.Name>
+          </S.Content>
+        </Html>
         <Suspense fallback={null}>
           <animated.mesh
             rotation={[0, -Math.PI / 1.4, 0]}
